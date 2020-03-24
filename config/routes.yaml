@@ -1,3 +1,13 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+hello_first:
+    path: /
+    controller: App\Controller\LuckyController::hello
+
+hello_second:
+    path: /hello2
+    controller: App\Controller\LuckyController::hello2
+
+hello_convert:
+    path: /convert/{kilometers}
+    controller: App\Controller\LuckyController::convert
+    requirements:
+        kilometers: \d+
