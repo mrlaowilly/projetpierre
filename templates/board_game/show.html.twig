@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <a href="{{ path('app_boardgame_index') }}">Retour a la liste</a>
+    <h1>{{ board_game.name }}</h1>
+    {% if board_game.description %}
+    <div>{{ board_game.description }}</div>
+    {% else %}
+    <div>Description en cours de rédaction</div>
+    {% endif %}
+    <dl>
+        <dt>Date de sortie</dt>
+        <dd>{{ board_game.releasedAt | date('d-m-Y') }}</dd>
+        <dt>A partir de</dt>
+        <dd>{{ board_game.ageGroup }} ans</dd>
+    </dl>
+{% endblock %}
+
