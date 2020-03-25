@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1>Nouveau jeu de société</h1>
+    {{ form_start(new_form) }}
+    {{ form_widget(new_form) }}
+    <button>Ajouter</button>
+    {{ form_end(new_form) }}
+{% endblock %}
+
