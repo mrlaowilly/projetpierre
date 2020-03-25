@@ -7,4 +7,5 @@
                 <li>{{ board_game.name }} <a href="{{ path('app_boardgame_show', {id: board_game.id}) }}">Voir</a></li>
             {% endfor %}
         </ul>
+    <a href="{{ path('app_boardgame_new') }}">Nouveau</a>
 {% endblock %}
